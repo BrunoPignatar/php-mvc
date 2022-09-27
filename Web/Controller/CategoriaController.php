@@ -5,7 +5,7 @@ use Web\Model\CategoriaModel;
 use Web\DAO\CategoriaDAO;
 
 
-class CategoriaController 
+class CategoriaController extends Controller
 {
     public static function index() 
     {

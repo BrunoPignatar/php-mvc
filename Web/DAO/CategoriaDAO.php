@@ -5,7 +5,7 @@ use \PDO;
 use Web\Model\CategoriaModel; 
 
 
-class CategoriaDAO
+class CategoriaDAO extends DAO
 {
     
     private $conexao;

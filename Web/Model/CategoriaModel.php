@@ -5,7 +5,7 @@ namespace Web\Model;
 use \Web\DAO\CategoriaDAO;
 
 
-class CategoriaModel
+class CategoriaModel extends Model
 {
     public $id, $descricao;
 
