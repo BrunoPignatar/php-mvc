@@ -1,10 +1,47 @@
-<form action="/login/auth" method="post">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        label, input { display: block;}
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <form action="/login/auth" method="post">
+        <fieldset>
+            <legend style=" color:white">Login de Usuário</legend>
 
-    <label>E-mail:</label>
-    <input name="email" type="text" />
+            
+            <label for="usuario" style="color: white;">Usuário:</label>
+            <input name="usuario" id="usuario" type="text" style="background:black; color:white; height:20px;" />
 
-    <label>Senha:</label>
-    <input name="senha" type="password" />
+            <label for="senha" style="color: white;">Senha:</label>
+            <input name="senha" id="senha" type="password" style="background:black; color:white; height:20px;" />
+            <br>
+            <button type="submit" style="background-color:black ; height:35px; width:65px; font-size:17px;color:white">Entrar</button>
 
-    <button type="submit">Entrar</button>
-</form>
+
+            <div style="display: flex;">
+            <a href="/signin"><p style="color: white;font-size: 8; margin-right: 10px;">Cadastro de Usuários</p></a>
+            <a href="/signin"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
+            </div>
+        </fieldset>
+    </form>    
+
+<style>
+        body{
+            background-color: #003f69;
+        }
+        
+
+
+    </style>
+
+</body>
+</html>

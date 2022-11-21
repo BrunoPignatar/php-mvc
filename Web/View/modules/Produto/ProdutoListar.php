@@ -44,10 +44,10 @@
 
 <br>
 <br>
-<center><a href="/produto/form"><button style="height: 85px; width:350px; font-size:25px; background-color:white;border: 1 solid black;color:black" >Adicionar mais produtos</button></a></center>
+<center><a href="/produto/form"><button style="height: 85px; width:350px; font-size:25px; background-color:#fad928;border: 1 solid black;color:black" >Adicionar mais produtos</button></a></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<a href="/"><button style="height: 85px; width:350px; font-size:25px; background-color:white;border: 1 solid black; position: absolute;
+<a href="/"><button style="height: 85px; width:350px; font-size:25px; background-color:#fad928;border: 1 solid black; position: absolute;
     bottom: 0;
     width: 99%;
     height: 100px;    
@@ -76,7 +76,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
-        background-color:  #5966AB;
+        background-color:  #f7d683;
         
     }
 </style>

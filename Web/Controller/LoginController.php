@@ -2,27 +2,38 @@
 
 namespace Web\Controller;
 
-
-
+use Web\DAO\LoginDAO;
 use Web\Model\LoginModel;
-
 
 
 class LoginController extends Controller
 {
-
-
-  
-    public static function index()
+    public static function form()
     {
-        parent::render('Login/FormLogin');
+        $model = new LoginModel();
+
+        if(isset($_GET['id'])) 
+            $model = $model->getById( (int) $_GET['id']); 
+            
+
+        include 'View/modules/Login/FormLogin.php';
+    }
+
+    public static function signin()
+    {
+        include 'View/modules/Login/LoginSignIn.php';
+    }
+
+    public static function lista()
+    {
+        include 'View/modules/Login/LoginLista.php';
     }
 
     public static function auth()
     {
         $model = new LoginModel();
 
-        $model->email = $_POST['email'];
+        $model->email = $_POST['usuario'];
         $model->senha = $_POST['senha'];
 
         $usuario_logado = $model->autenticar();
@@ -31,7 +42,7 @@ class LoginController extends Controller
 
             $_SESSION['usuario_logado'] = $usuario_logado;
 
-            header("Location: /");
+            header("Location: /inicio");
 
         } else
             header("Location: /login?erro=true");
@@ -43,4 +54,30 @@ class LoginController extends Controller
 
         parent::isAuthenticated();
     }
+
+    public static function save() 
+    {
+        $login = new LoginModel();
+
+        $login->id = $_POST['id'];
+        $login->nome = $_POST['nome'];
+        $login->email = $_POST['email'];
+        $login->senha = $_POST['senha']; 
+        $login->save();
+
+        header("Location: /login"); 
+    }
+
+    public static function delete()
+    {
+
+
+        $model = new LoginDAO();
+
+        $model->delete( (int) $_GET['id'] ); // Enviando a variável $_GET como inteiro para o método delete
+
+        header("Location: /login");
+    }
+
+
 }

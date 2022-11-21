@@ -22,24 +22,24 @@
             <center>  <input type="hidden" value="<?= $model->id ?>" name="id" />
 
             <center>  <label for="nome" style="color: white;">Nome:</label>
-            <center> <input name="nome" id="nome" type="text" value="<?= $model->nome ?>" style="background:white; color:black; height:20px;"/>
+            <center> <input name="nome" id="nome" type="text" value="<?= $model->nome ?>" style="background:#fad928; color:black; height:20px;"/>
 
             <center> <label for="descricao" style="color: white;">Descrição:</label>
-            <center> <input name="descricao" id="descricao" type="text" value="<?= $model->descricao ?>" style="background:white; color:black; height:20px;"/>
+            <center> <input name="descricao" id="descricao" type="text" value="<?= $model->descricao ?>" style="background:#fad928; color:black; height:20px;"/>
 
             <center> <label for="preco" style="color: white;">Preço:</label>
-            <center><input name="preco" id="preco" type="is_double" value="<?= $model->preco ?>" style="background:white; color:black; height:20px;"/>
+            <center><input name="preco" id="preco" type="is_double" value="<?= $model->preco ?>" style="background:#fad928; color:black; height:20px;"/>
 
             <br>
-            <center><button type="submit"  style="background-color:white ;  height:35px; width:65px; font-size:17px;color:black">Enviar</button>
+            <center><button type="submit"  style="background-color:#fad928 ;  height:35px; width:65px; font-size:17px;color:black">Enviar</button>
 
         </fieldset>
     </form>    
 <br>
-    <center><a href="/produto"><button style="height: 85px; width:350px; font-size:25px; background-color:white;border: 1 solid black;color:black" >Ver listagem de produtos</button></a></center>
+    <center><a href="/produto"><button style="height: 85px; width:350px; font-size:25px; background-color:#fad928;border: 1 solid black;color:black" >Ver listagem de produtos</button></a></center>
     
 
-<a href="/"><button style="height: 85px; width:350px; font-size:25px; background-color:white;border: 1 solid black; position: absolute;
+<a href="/"><button style="height: 85px; width:350px; font-size:25px; background-color:#fad928;border: 1 solid black; position: absolute;
     bottom: 0;
     width: 99%;
     height: 100px;    
@@ -48,7 +48,7 @@
 
     <style>
         body{
-            background-color:  #5966AB;
+            background-color:  #f7d683;
         }
         
 

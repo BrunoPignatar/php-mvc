@@ -15,31 +15,6 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($url)
 {
-   ## ROTAS PARA LOGIN
-
-   case '/login':
-    LoginController::index();
-break;
-
-case '/login/auth':
-    LoginController::auth();
-break;
-
-case '/logout':
-    LoginController::logout();
-break;
-
-
-
-case '/':
-    echo "página inicial";
-    break;
-
-   
-   
-   
-   
-   
     ## ROTAS PARA PESSOA
     case '/pessoa':
         PessoaController::index();
@@ -106,6 +81,44 @@ case '/':
 
     case '/funcionario/delete':
         FuncionarioController::delete();
+    break;
+
+
+
+    #ROTAS LOGIN
+
+    case '/login':
+        LoginController::form();
+    break;
+
+    case '/login/auth':
+        LoginController::auth();
+    break;
+
+    case '/logout':
+        LoginController::logout();
+    break;
+
+    case '/signin':
+        LoginController::signin();
+    break;
+
+    case '/signin/save':
+        LoginController::save();
+    break;
+
+    case '/login/lista':
+        LoginController::lista();
+    break;
+
+    case '/login/delete':
+        LoginController::delete();
+    break;
+
+    
+    
+    case '/inicio':
+        include 'View/modules/Pg-inicial\Pagina-Inicial.php';
     break;
 
     default:
